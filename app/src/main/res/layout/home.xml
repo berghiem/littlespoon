@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="ruby.com.littlespoon.view.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/announcement"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edit_text"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_margin="5dp"
+                android:text="@string/agecategory"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:scrollbars="vertical"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_margin="5dp"
+                android:text="@string/foodcategory"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fcategory"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:scrollbars="vertical" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/allategory"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Apply Filter"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="12sp"
+                android:id="@+id/filter"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_text_green"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editorsPick"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/editorPick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:scrollbars="vertical" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/latestRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/showmore"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:text="@string/showmore" />
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+
+        </LinearLayout>
+
+
+
+     </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
